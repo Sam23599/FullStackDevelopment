@@ -1,0 +1,69 @@
+Install Xampp
+
+Step 1: Download the installation package
+            https://www.apachefriends.org/index.html
+
+
+Step 2: Make the installation package executable
+        Go into the Downloaded folder
+            $ cd Downloads 
+            $ cd /home/user/Desktop
+
+        Make the file executable
+            $ chmod 755 xampp-linux-x64-7.2.10-0-installer.run         
+            $ chmod +x xampp-linux-x64-7.2.5-0-installer.run
+
+Step 3: Confirm execute permission
+        Check executability
+            $ ls -l xampp-linux-x64-7.2.10-0-installer.run
+                example-
+                    $ ls -l xampp-linux-x64-8.0.0-0-installer.run 
+                    $ -rwxr-xr-x 1 sam sam 158300822 Dec  5 12:59 xampp-linux-x64-8.0.0-0-installer.run 
+
+                The -rwxr output shows that the file can be executed by the user whose name is also mentioned in the output.
+
+Step 4: Launch the Setup Wizard
+        $ sudo ./xampp-linux-7.2.10-0-installer.run
+
+
+Step 5: Work through the graphical setup wizard
+        Install XAMPP components that you want to install.
+        Avoid installing sponsored applications such as Drupal, Joomla, and WordPress etc.
+        Follow rest of the steps and finish the installation.
+
+Step 6: Launch XAMPP through the Terminal
+        $ sudo /opt/lampp/lampp start
+
+            example- 
+                $sudo /opt/lampp/lampp start
+                Starting XAMPP for Linux 8.0.0-0...
+                XAMPP: Starting Apache...already running.
+                XAMPP: Starting MySQL...ok.
+                XAMPP: Starting ProFTPD...ok.
+            
+        It should start working.
+        If it fails, then it means that Net Tools are not installed on your system. Install them as follows-
+
+            $ sudo apt install net-tools
+
+Step 7: Verify Installation
+        Open the follwoing URL in browser to check if your XAMPP is working fine.
+            http://localhost
+            http://localhost/phpmyadmin
+
+
+******************************************************************************************************
+
+
+Uninstall XAMPP
+    Go into the installed Directory
+       $ cd /opt/lampp
+
+    Uninstall it    
+        $ sudo ./uninstall
+
+    Manually remove the lampp folder along with all its files and sub-folders. 
+        $ sudo rm -r /opt/lampp
+
+
+
